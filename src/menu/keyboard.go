@@ -14,13 +14,13 @@ func (m *menuPagesType) keyboardLoop() callback {
 		kb.Pause()
 		switch e.Key {
 		case termbox.KeyArrowDown:
-			m.menus[m.curIdx].handleOptNav(1)
+			m.menu.handleOptNav(1)
 		case termbox.KeyArrowUp:
-			m.menus[m.curIdx].handleOptNav(-1)
+			m.menu.handleOptNav(-1)
 		case termbox.KeyArrowLeft:
-			m.menus[m.curIdx].handleSubOptNav(-1)
+			m.menu.handleSubOptNav(-1)
 		case termbox.KeyArrowRight:
-			m.menus[m.curIdx].handleSubOptNav(1)
+			m.menu.handleSubOptNav(1)
 		case termbox.KeySpace:
 			fallthrough
 		case termbox.KeyEnter:

@@ -48,7 +48,7 @@ func (m *menu) handleSubOptNav(mag int) {
 }
 
 func (m *menuPagesType) handleOptSelect() (bool, callback) {
-	curMenu := m.menus[m.curIdx]
+	curMenu := m.menu
 	if curMenu.options[curMenu.curIdx].onSelect != nil {
 		return curMenu.options[curMenu.curIdx].onSelect(m)
 	}

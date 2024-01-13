@@ -8,20 +8,14 @@ type pos struct {
 
 type menuPagesType struct {
 	curIdx     int
-	menus      []*menu
+	menu       *menu
 	displayPos pos
-}
-
-func (m *menuPagesType) changeMenuPage(pageIdx int) {
-	m.curIdx = pageIdx
-	m.menus[m.curIdx].curIdx = 0
 }
 
 func InitMenu() {
 	menuPages := menuPagesType{
 		displayPos: pos{60, 5},
-		curIdx:     0,
-		menus:      []*menu{&mainMenu},
+		menu:       &mainMenu,
 	}
 	menuPages.renderMenu()
 	if callback := menuPages.keyboardLoop(); callback != nil {

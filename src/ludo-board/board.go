@@ -63,7 +63,7 @@ func (p Player) IsAllPawnsAtDest() bool {
 }
 
 func (board *LudoBoard) SetupBoard(players []common.PlayerData) {
-	boardPos := cellmap.Pos{5, 2}
+	boardPos := cellmap.Pos{45, 5}
 	lx, rx, ty, by := boardPos.X+2, boardPos.X+27, boardPos.Y+1, boardPos.Y+13
 
 	boxLen, boxWid := 3, 9

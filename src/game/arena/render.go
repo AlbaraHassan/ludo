@@ -16,7 +16,7 @@ func (a *Arena) Render() {
 }
 
 func (a *Arena) RenderBottomSection() {
-	x, y := 10, 22
+	x, y := 54, 25
 	pName := a.Players[a.CurTurn].Name
 	renderWhoseTurn(a.Players[a.CurTurn].Color, x, y)
 	tbu.RenderString(x+3, y, pName, termbox.ColorDefault)

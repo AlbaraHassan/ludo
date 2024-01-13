@@ -33,7 +33,7 @@ var (
 				label: "Done",
 				onSelect: func(mpt *menuPagesType) (bool, callback) {
 					players := []common.PlayerData{}
-					curMenuOpts := mpt.menus[mpt.curIdx].options
+					curMenuOpts := mpt.menu.options
 					curMenuOpts = curMenuOpts[:len(curMenuOpts)-2]
 					for _, opt := range curMenuOpts {
 						players = append(players, common.PlayerData{Color: opt.label.(termbox.Attribute), Type: opt.option[opt.curIdx]})

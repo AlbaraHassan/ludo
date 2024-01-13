@@ -35,7 +35,7 @@ func renderSubOpts(op opt, x, y, oidx, menuIdx int) {
 func (m *menuPagesType) renderMenu() {
 	tbu.Clear()
 
-	curMenu := m.menus[m.curIdx]
+	curMenu := m.menu
 
 	y := m.displayPos.y
 
